@@ -86,5 +86,7 @@ _open_files_for_editing() {
 
 # alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
 # alias pacdiff=eos-pacdiff
+alias mpvs='mpv --no-audio'
+alias mpvsfs='mpv --no-audio --fullscreen'
 ################################################################################
 
