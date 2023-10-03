@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+# Policy Authentication Agent
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# variables
+scripts=~/.scripts
+
+# waybar
+$scripts/launch_waybar &
+
+# Applets
+nm-applet --indicator &\
