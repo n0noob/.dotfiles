@@ -31,13 +31,6 @@ ShowInstallerIsoInfo() {
 }
 
 
-#alias ls='ls --color=auto'
-alias ls="exa --color=always --group-directories-first"
-#alias ll='ls -lv --ignore=..'   # show long listing of all except ".."
-alias ll="exa -l --color=always --group-directories-first"
-alias l='ls -lv --ignore=.?*'   # show long listing but no hidden dotfiles except "."
-alias vim='nvim'
-
 [[ "$(whoami)" = "root" ]] && return
 
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100          # limits recursive functions, see 'man bash'
@@ -83,10 +76,9 @@ _open_files_for_editing() {
 ## Aliases for the functions above.
 ## Uncomment an alias if you want to use it.
 ##
+source ~/.scripts/aliases.sh
 
 # alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
 # alias pacdiff=eos-pacdiff
-alias mpvs='mpv --no-audio'
-alias mpvsfs='mpv --no-audio --fullscreen'
 ################################################################################
 
