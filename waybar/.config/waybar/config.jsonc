@@ -14,10 +14,10 @@
         "custom/launcher",
         "hyprland/workspaces",
         "cpu",
-        "memory",
+        "memory"
         // "temperature",
         // "disk",
-        "custom/updates"
+        // "custom/updates"
     ],
     "modules-center": [
         "custom/music"
@@ -58,14 +58,14 @@
     },
     "cpu": {
         "format": " {usage}%",
-        //"tooltip": true,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+	"tooltip": false,
+        "on-click": "kitty --title all_is_kitty sh -c 'btop --utf-force'",
         "interval": 2
     },
     "memory": {
         "format": " {}%",
         "tooltip": true,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "on-click": "kitty --title all_is_kitty sh -c 'btop --utf-force'",
         "interval": 2
     },
     "temperature": {
