@@ -12,9 +12,9 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/launcher",
-        "wlr/workspaces",
-        // "cpu",
-        // "memory",
+        "hyprland/workspaces",
+        "cpu",
+        "memory",
         // "temperature",
         // "disk",
         "custom/updates"
@@ -45,7 +45,7 @@
         // "on-click": "pkill wofi || wofi --show drun -n",
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         // "format": "{icon} {name}",
         "format": "",
         "format-icons": {
@@ -58,7 +58,7 @@
     },
     "cpu": {
         "format": " {usage}%",
-        "tooltip": true,
+        //"tooltip": true,
         "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
         "interval": 2
     },
@@ -225,7 +225,7 @@
     },
     "tray": {
         "icon-size": 15,
-        "spacing": 15
+        "spacing": 10
     },
     "clock": {
         "timezone": "Asia/Calcutta",
