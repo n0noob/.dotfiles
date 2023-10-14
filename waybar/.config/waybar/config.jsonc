@@ -40,10 +40,10 @@
         "tooltip": true,
         "exec": "echo '{\"text\":\"💧\",\"tooltip\":\"Drun | Run\"}'",
         "return-type": "json",
-        "on-click": "pkill tofi || gamemoderun tofi-drun -c ~/.config/tofi/tofi.launcher.conf",
-        "on-click-right": "pkill tofi || gamemoderun tofi-run -c ~/.config/tofi/tofi.launcher.conf",
-        // "on-click": "pkill wofi || wofi --show drun -n",
-        // "on-click-right": "pkill wofi || wofi --show run -n",
+        // "on-click": "pkill tofi || gamemoderun tofi-drun -c ~/.config/tofi/tofi.launcher.conf",
+        // "on-click-right": "pkill tofi || gamemoderun tofi-run -c ~/.config/tofi/tofi.launcher.conf",
+        "on-click": "pkill wofi || wofi --show drun -n",
+        "on-click-right": "pkill wofi || wofi --show run -n"
     },
     "hyprland/workspaces": {
         // "format": "{icon} {name}",

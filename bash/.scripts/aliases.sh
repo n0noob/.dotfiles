@@ -5,3 +5,9 @@ alias ll="exa -l --color=always --group-directories-first"
 alias vim='nvim'
 alias mpvs='mpv --no-audio'
 alias mpvsfs='mpv --no-audio --fullscreen'
+
+# pacman 
+alias pac-list-installed='pacman -Qqe'
+alias pac-list-unused='pacman -Qdtq'
+alias pac-info='pacman -Qi'
+
