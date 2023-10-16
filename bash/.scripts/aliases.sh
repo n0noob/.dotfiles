@@ -10,4 +10,4 @@ alias mpvsfs='mpv --no-audio --fullscreen'
 alias pac-list-installed='pacman -Qqe'
 alias pac-list-unused='pacman -Qdtq'
 alias pac-info='pacman -Qi'
-
+alias pac-search-installed='pacman -Qs'

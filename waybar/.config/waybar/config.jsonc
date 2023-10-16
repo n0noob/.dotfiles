@@ -57,7 +57,7 @@
         "on-click": "activate"
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": " {usage}%",
 	"tooltip": false,
         "on-click": "kitty --title all_is_kitty sh -c 'btop --utf-force'",
         "interval": 2
