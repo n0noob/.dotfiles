@@ -168,7 +168,7 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec kitty 
 
 # start thunderbird
 bindsym $mod+m exec thunderbird
