@@ -6,8 +6,9 @@ alias vim='nvim'
 alias mpvs='mpv --no-audio'
 alias mpvsfs='mpv --no-audio --fullscreen'
 
-# pacman 
+# pacman and AUR helper
 alias pac-list-installed='pacman -Qqe'
 alias pac-list-unused='pacman -Qdtq'
 alias pac-info='pacman -Qi'
 alias pac-search-installed='pacman -Qs'
+alias paru='paru --removemake'

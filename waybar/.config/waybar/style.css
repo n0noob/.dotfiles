@@ -58,6 +58,10 @@
   color: @text;
 }
 
+tooltip {
+  border-radius: 10px;
+}
+
 /* =============================== */
 
 
@@ -89,13 +93,15 @@
 #custom-weather {
   background-color: @surface0;
   color: @text;
-  border-radius: 16px;
-  padding: 0.5rem 1rem;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  padding: 0.4rem 0.8rem;
   box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-  margin-top: 2px;
+  margin-top: 0px;
   /*
     margin-bottom: 10px;
 */
+  margin-left: 0;
   margin-right: 10px;
 }
 
@@ -103,9 +109,11 @@
 /* Launcher Module */
 #custom-launcher {
   color: @green;
+  border-bottom-left-radius: 0;
   padding-top: 0px;
   padding-bottom: 0px;
   padding-right: 10px;
+  margin-left: 0px;
 }
 
 /* =============================== */
@@ -203,10 +211,11 @@
 }
 
 #memory {
-  border-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   margin-right: 0px;
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 7px;
 }
 
 #temperature {
@@ -313,9 +322,10 @@
 /* PulseAudio Module */
 #pulseaudio {
   color: @mauve;
-  border-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
   margin-right: 0px;
-  padding-left: 5px;
+  padding-left: 7px;
   padding-right: 5px;
 }
 
@@ -376,8 +386,8 @@
   color: @mauve;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  padding-left: 5px;
-  padding-right: 1.25rem;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
 }
 
 
@@ -385,7 +395,7 @@
 /* Tray Module */
 #tray {
   color: @mauve;
-  padding-right: 1.25rem;
+  padding-right: 1rem;
 }
 
 /* =============================== */
@@ -424,11 +434,13 @@
 
 /* Powermenu Module */
 #custom-power {
-  color: @mauve;
-  /* border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-left: 8px; */
+  color: @red;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 0;
+  /*padding-left: 8px; 
   padding-right: 1.20rem;
+  */
 }
 
 /* =============================== */

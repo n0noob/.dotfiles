@@ -10,4 +10,4 @@ scripts=~/.scripts
 $scripts/launch_waybar &
 
 # Applets
-nm-applet --indicator &\
+nm-applet --indicator &
