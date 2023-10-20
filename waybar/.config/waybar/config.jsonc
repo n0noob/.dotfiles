@@ -119,9 +119,9 @@
     "custom/music": {
         "format": "{icon}{}",
         "format-icons": {
-            // "Playing": " ", // Uncomment if not using the dynamic script
-            "Paused": " ",
-            "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+            "Playing": " ", // Uncomment if not using the dynamic script
+            "Paused": " ",
+            "Stopped": " " // This stop symbol is RTL. So &#x202d; is left-to-right override.
         },
         "escape": true,
         "tooltip": true,
