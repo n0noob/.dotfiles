@@ -69,6 +69,7 @@ tooltip {
 /* Main Modules */
 #custom-launcher,
 #workspaces,
+#taskbar,
 #window,
 #tray,
 #backlight,
@@ -194,6 +195,33 @@ tooltip {
 
 /* =============================== */
 
+/* =============================== */
+/* Taskbar */
+#taskbar {
+  padding-left: 8px;
+  padding-right: 5px;
+}
+
+#taskbar button {
+  padding-left: 4px;
+  padding-right: 2px;
+  border-radius: 10px;
+}
+
+#taskbar button.active {
+  padding-left: 4px;
+  padding-right: 2px;
+  border-radius: 10px;
+}
+
+/* =============================== */
+
+/* =============================== */
+/* window */
+/* #window {
+} */
+/* =============================== */
+
 
 /* =============================== */
 /* System Monitoring Modules */
@@ -213,7 +241,7 @@ tooltip {
 #memory {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
-  margin-right: 0px;
+  /* margin-right: 0px; */
   padding-left: 5px;
   padding-right: 7px;
 }

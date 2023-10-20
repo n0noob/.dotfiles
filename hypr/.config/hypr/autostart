@@ -9,5 +9,8 @@ scripts=~/.scripts
 # waybar
 $scripts/launch_waybar &
 
+# wallpaper
+$scripts/wall ~/.wallpapers/1.png &
+
 # Applets
 nm-applet --indicator &
