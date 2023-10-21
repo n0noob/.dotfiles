@@ -12,5 +12,9 @@ $scripts/launch_waybar &
 # wallpaper
 $scripts/wall ~/.wallpapers/1.png &
 
+# clipboard
+wl-paste --watch cliphist store &
+
 # Applets
 nm-applet --indicator &
+blueman-applet &

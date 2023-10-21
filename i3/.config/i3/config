@@ -192,8 +192,7 @@ bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
 exec --no-startup-id /usr/bin/xidlehook \
   --not-when-audio \
   --not-when-fullscreen \
-  --timer 300 '~/.config/i3/scripts/blur-lock' \
-  ''
+  --timer 300 '~/.config/i3/scripts/blur-lock'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -449,8 +448,8 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # if you do not use dex: exec --no-startup-id dex --autostart --environment i3
 # you need to have tray apps started here:
 
-# start blueberry app for managing bluetooth devices from tray:
-exec --no-startup-id blueberry-tray
+# start blueman app for managing bluetooth devices from tray:
+exec --no-startup-id blueman-applet
 
 # networkmanager-applet
 exec --no-startup-id nm-applet

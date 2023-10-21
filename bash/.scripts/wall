@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-swww_fork=~/.scripts/tools/swww
-
 swww query || swww init
 echo "Changing wallpaper to $1"
 swww img "$1" \
