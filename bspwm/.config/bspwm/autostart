@@ -1,0 +1,33 @@
+#! /usr/bin/sh
+
+# cursor
+xsetroot -cursor_name left_ptr &
+
+# handle multiple monitors
+~/.scripts/x-handle-monitors.sh
+
+# wallpaper
+feh --no-fehbg --randomize --bg-scale $HOME/.wallpapers/*
+
+# polkit agent
+if [[ ! `pidof polkit-gnome-authentication-agent-1` ]]; then
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+fi
+
+# keybinding agent
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# notification agent
+pgrep -x dunst > /dev/null || dunst --config ~/.config/dunst/dunstrc &
+
+# compositor
+picom -b &
+
+# bar
+~/.config/polybar/launch.sh
+
+# auto lock screen
+/usr/bin/xidlehook \
+  --not-when-audio \
+  --not-when-fullscreen \
+  --timer 300 '~/.scripts/x-blur-lock' '' &
