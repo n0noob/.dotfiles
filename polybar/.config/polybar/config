@@ -383,7 +383,7 @@ ramp-foreground = ${colors.foreground-alt}
 type = custom/text
 content = 
 content-foreground = ${colors.secondary}
-click-left = ~/.config/i3/scripts/powermenu 
+click-left = ~/.config/rofi/powermenu/type-1/powermenu.sh
 
 ;format-spacing = 1
 

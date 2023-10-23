@@ -10,7 +10,7 @@ scripts=~/.scripts
 $scripts/launch_waybar &
 
 # wallpaper
-$scripts/wall ~/.wallpapers/1.png &
+$scripts/wall $(find ~/.wallpapers/ -type f | shuf -n 1) &
 
 # clipboard
 wl-paste --watch cliphist store &

@@ -273,11 +273,12 @@
     "custom/cycle_wall": {
         //"format": "",
         //"exec": "~/.scripts/tools/expand wall",
-        "exec": "echo '{\"text\":\" \",\"tooltip\":\"Cycle wallpaper\"}'",
+        "exec": "echo '{\"text\":\" \",\"tooltip\":\"Change wallpaper\"}'",
         "return-type": "json",
         //"interval": 1,
-        "on-click": "~/.scripts/tools/expand cycle",
-        "on-click-right": "~/.scripts/tools/expand cycler"
+        "on-click": "~/.scripts/wall $(find ~/.wallpapers/ -type f | shuf -n 1)"
+	//"on-click": "~/.scripts/tools/expand cycle"
+        //"on-click-right": "~/.scripts/tools/expand cycler"
     },
     "custom/clipboard": {
         "format": "{}",

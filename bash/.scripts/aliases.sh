@@ -11,4 +11,31 @@ alias pac-list-installed='pacman -Qqe'
 alias pac-list-unused='pacman -Qdtq'
 alias pac-info='pacman -Qi'
 alias pac-search-installed='pacman -Qs'
-alias paru='paru --removemake'
+
+# dotfiles backup
+backup_package() {
+    package=$1
+
+    # Show warning if package already exists
+    if [[ -e ~/.dotfiles/$package ]]; then 
+        echo "${package} already backed up."
+        read -p "Press any key to start overwriting the backup"
+    fi
+
+    if [[ -d ~/.config/$package ]]; then
+        echo "$package is a directory"
+        if [[ ! -e ~/.dotfiles/$package ]]; then 
+            mkdir -p ~/.dotfiles/$package/.config/$package
+        fi
+    elif [[ -f ~/.config/$package ]]; then
+        echo "$package is a file"
+    else
+        echo "$package is not valid"
+        return 1
+    fi
+
+    echo "Backing up $package from .config"
+    
+    cp -Rf ~/.config/$package ~/.dotfiles/$package/.config/
+    ( cd ~/.dotfiles && stow --adopt $package )
+}
