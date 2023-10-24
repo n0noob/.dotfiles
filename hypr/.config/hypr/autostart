@@ -5,12 +5,13 @@
 
 # variables
 scripts=~/.scripts
+wallpapers=~/.wallpapers
 
 # waybar
 $scripts/launch_waybar &
 
 # wallpaper
-$scripts/wall $(find ~/.wallpapers/ -type f | shuf -n 1) &
+$scripts/wall $(find $wallpapers/ -type f | shuf -n 1) &
 
 # clipboard
 wl-paste --watch cliphist store &

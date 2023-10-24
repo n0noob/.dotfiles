@@ -4,7 +4,7 @@
 xsetroot -cursor_name left_ptr &
 
 # handle multiple monitors
-~/.scripts/x-handle-monitors.sh
+~/.scripts/x-handle-monitors.sh -w bspwm
 
 # wallpaper
 feh --no-fehbg --randomize --bg-scale $HOME/.wallpapers/*

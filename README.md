@@ -6,7 +6,7 @@ In addition, following dependencies are required:
 * BSPWM:
 
 ```
-# pacman -S paru bspwm sxhkd rofi dunst feh polybar xidlehook thunar kitty stow scrot polkit-gnome picom networkmanager neovim maim i3lock arandr
+# pacman -S paru bspwm sxhkd rofi dunst feh polybar xidlehook thunar kitty stow scrot polkit-gnome picom networkmanager neovim maim i3lock arandr xclip
 ```
 
 * hyprland:
