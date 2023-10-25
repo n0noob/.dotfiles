@@ -43,13 +43,7 @@ if [[ $(cat /proc/acpi/button/lid/LID0/state | grep closed) ]]; then
     xrandr --output eDP --off
     echo "New monitor list: ${MONITOR_ARR[@]}"
 else
-    xrandr --display :0 --output "eDP" --auto
-fi
-
-# Temporary patch
-if [[ $(xrandr -q | grep "DP-1-0 connected") ]]; then
-    xrandr --display :0 --output "DP-1-0" --auto
-    sleep 1
+    xrandr --output "eDP" --auto
 fi
 
 monitor_present=()
@@ -58,7 +52,8 @@ disp_ptr=0
 for i in ${!MONITOR_ARR[@]}; do
     if [[ $(xrandr -q | grep "${MONITOR_ARR[$i]} connected") ]]; then
         echo "${MONITOR_ARR[$i]} is connected"
-        monitor_present+=("${MONITOR_ARR[$i]}")
+        xrandr --output "${MONITOR_ARR[$i]}" --auto
+	    monitor_present+=("${MONITOR_ARR[$i]}")
 
         # Arrange monitor output
         if [[ $num_monitors == "3" ]] || [[ $lid_closed == "true" ]]; then

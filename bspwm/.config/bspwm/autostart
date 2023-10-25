@@ -15,13 +15,13 @@ if [[ ! `pidof polkit-gnome-authentication-agent-1` ]]; then
 fi
 
 # keybinding agent
-pgrep -x sxhkd > /dev/null || sxhkd &
+pkill -x sxhkd && sxhkd > /tmp/sxhkd.log 2>&1 &
 
 # notification agent
 pgrep -x dunst > /dev/null || dunst --config ~/.config/dunst/dunstrc &
 
 # compositor
-picom -b &
+pgrep -x picom > /dev/null || picom -b &
 
 # bar
 ~/.config/polybar/launch.sh
@@ -30,4 +30,4 @@ picom -b &
 /usr/bin/xidlehook \
   --not-when-audio \
   --not-when-fullscreen \
-  --timer 300 '~/.scripts/x-blur-lock' '' &
+  --timer 300 '~/.scripts/x-blur-lock.sh' '' &

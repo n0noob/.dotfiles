@@ -2,22 +2,29 @@
 
 ## Prerequisites
 Requires [gnu/stow](https://www.gnu.org/software/stow/) for dotfiles management.
+
+Essentials:
+```
+# pacman -S paru stow 
+```
+
 In addition, following dependencies are required:
+
 * BSPWM:
 
 ```
-# pacman -S paru bspwm sxhkd rofi dunst feh polybar xidlehook thunar kitty stow scrot polkit-gnome picom networkmanager neovim maim i3lock arandr xclip
+$ paru -S bspwm sxhkd rofi dunst feh polybar xidlehook thunar kitty polkit-gnome picom networkmanager neovim maim i3lock arandr xclip
 ```
 
 * hyprland:
 
 ```
-# pacman -S hyprland wofi waybar dunst wlogout polkit-gnome ttf-jetbrains-mono-nerd thunar kitty swww swaync swaylock-effects stow networkmanager neovim gamemode cliphist btop
+$ paru -S hyprland wofi waybar dunst wlogout polkit-gnome ttf-jetbrains-mono-nerd thunar kitty swww swaync swaylock-effects networkmanager neovim gamemode cliphist btop
 ```
 
 Some generic packages:
 ```
-# pacman -S mpv yt-dlp refind nwg-look-bin meld git feh code
+# pacman -S mpv yt-dlp refind nwg-look-bin meld git code
 ```
 
 ## Home location

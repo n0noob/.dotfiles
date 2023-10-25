@@ -15,8 +15,8 @@ super + {@space,d}
 	~/.config/rofi/launchers/type-2/launcher.sh
 
 # make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
+# super + Escape
+# 	pkill -USR1 -x sxhkd
 
 #
 # bspwm hotkeys
@@ -124,17 +124,21 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# screenshot
+# screenshot: selection
+Print
+	~/.scripts/screenshot-sel.sh
+
+# screenshot: full
 super + Print
-	maim --select | xclip -selection clipboard -t image/png
+	~/.scripts/screenshot-full.sh
 
 # lock screen
 super + l
-	~/.scripts/x-blur-lock
+	~/.scripts/x-blur-lock.sh
 
 # Custom
 super + ctrl + p 
-	feh $(find ~/.Pictures -type f \( -iname "*.jpg" -or -iname "*.jpeg" \) | grep -v "__MACOSX" | shuf -n1) -F -d 
+	feh $(find ~/.Pictures -type f \( -iname "*.jpg" -or -iname "*.jpeg" -or -iname "*.png" \) | grep -v "__MACOSX" | shuf -n1) -F -d 
 
 super + ctrl + v 
 	mpv --no-audio --fullscreen --start=5% "$(find ~/.Videos -type f \( -iname "*.m4v" -or -iname "*.mp4" \)| shuf -n1)"
