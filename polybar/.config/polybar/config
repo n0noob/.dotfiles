@@ -45,7 +45,7 @@ line-color = #f00
 border-size = 0
 border-color = #00000000
 
-padding-left = 0
+padding-left = 1
 padding-right = 1
 
 module-margin-left = 1
@@ -60,7 +60,7 @@ font-0 = FiraCode Nerd Font:style=Regular:pixelsize=9;1
 ;font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
-modules-right = filesystem pulseaudio memory cpu network battery temperature date powermenu 
+modules-right = filesystem pulseaudio memory cpu network battery date powermenu 
 
 tray-position = right
 tray-padding = 2
@@ -359,25 +359,6 @@ animation-discharging-4 = 
 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
-
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
 type = custom/text
