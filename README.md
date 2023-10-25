@@ -24,7 +24,7 @@ $ paru -S hyprland wofi waybar dunst wlogout polkit-gnome ttf-jetbrains-mono-ner
 
 Some generic packages:
 ```
-# pacman -S mpv yt-dlp refind nwg-look-bin meld git code
+# pacman -S mpv yt-dlp refind nwg-look-bin meld git code gnome-screenshot
 ```
 
 ## Home location
