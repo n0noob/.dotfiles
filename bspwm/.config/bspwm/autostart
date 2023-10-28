@@ -15,7 +15,8 @@ if [[ ! `pidof polkit-gnome-authentication-agent-1` ]]; then
 fi
 
 # keybinding agent
-pkill -x sxhkd && sxhkd > /tmp/sxhkd.log 2>&1 &
+# pkill -x sxhkd || sxhkd > /tmp/sxhkd.log 2>&1 &
+pgrep -x sxhkd > /dev/null || sxhkd &
 
 # notification agent
 pgrep -x dunst > /dev/null || dunst --config ~/.config/dunst/dunstrc &
