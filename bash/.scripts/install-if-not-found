@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# set -x
+
+package=$1
+
+if [[ ! "$(pacman -Qqe | grep $package)" ]]; then 
+    echo "$package not found" 
+    if [[ "$(command -v pacman)" ]]; then 
+        echo "Searching pacman repository"
+        search_res=$(pacman -Ss $package)
+        if [[ "$?" ]]; then
+            echo "Attempting to install"
+            sudo pacman -S $package
+        fi
+    else 
+        echo "pacman not found"
+    fi
+fi
+
+# set +x

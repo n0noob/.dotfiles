@@ -76,6 +76,7 @@ _open_files_for_editing() {
 ## Aliases for the functions above.
 ## Uncomment an alias if you want to use it.
 ##
+source ~/.scripts/constants.sh
 source ~/.scripts/aliases.sh
 
 # alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing

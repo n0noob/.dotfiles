@@ -1,8 +1,8 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 killall -q waybar
 
 # env GTK_DEBUG=interactive
-waybar --log-level debug \
+waybar --log-level info \
     --config ~/.config/waybar/config.jsonc \
     --style ~/.config/waybar/style.css > /tmp/waybar.log 2>&1 & disown

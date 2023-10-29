@@ -4,9 +4,9 @@ alias ls="exa --color=always --group-directories-first"
 alias ll="exa -l --color=always --group-directories-first"
 alias vim='nvim'
 
+# mpv
 alias mpvs='mpv --no-audio'
 alias mpvsfs='mpv --no-audio --fullscreen'
-
 
 # pacman and AUR helper
 alias pac-list-installed='pacman -Qqe'
@@ -14,11 +14,14 @@ alias pac-list-unused='pacman -Qdtq'
 alias pac-info='pacman -Qi'
 alias pac-search-installed='pacman -Qs'
 
+# file related
+alias list-extensions='find . -type f | rev | cut -d "." -f 1 | sort | uniq | rev'
 
 # find random files in current directory
 get_random_file() {
     # set -v -x -e
     dir=$1
+    extension=$2
 
     # if variable dir is set but does not point to a valid directory
     if [[ "$dir" ]]; then
@@ -33,7 +36,12 @@ get_random_file() {
         dir="$(pwd -P)"
     fi
 
-    find "$dir" -type f | shuf -n 1
+    if [[ ! "$extension" ]]; then 
+        find "$dir" -type f | shuf -n 1
+    else 
+        find "$dir" -type f -iname "*.$extension" | shuf -n 1
+    fi
+    
     # set +v +x +e
 }
 
