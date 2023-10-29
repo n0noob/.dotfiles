@@ -46,14 +46,22 @@ else
     xrandr --output "eDP" --auto
 fi
 
+# Enable all connected monitors
+for i in ${!MONITOR_ARR[@]}; do
+    if [[ $(xrandr -q | grep "${MONITOR_ARR[$i]} connected") ]]; then
+	xrandr --output "${MONITOR_ARR[$i]}" --auto
+	# sleep 1
+    fi
+done
+
 monitor_present=()
 
 disp_ptr=0
 for i in ${!MONITOR_ARR[@]}; do
     if [[ $(xrandr -q | grep "${MONITOR_ARR[$i]} connected") ]]; then
         echo "${MONITOR_ARR[$i]} is connected"
-        xrandr --output "${MONITOR_ARR[$i]}" --auto
-	    monitor_present+=("${MONITOR_ARR[$i]}")
+        # xrandr --output "${MONITOR_ARR[$i]}" --auto
+	monitor_present+=("${MONITOR_ARR[$i]}")
 
         # Arrange monitor output
         if [[ $num_monitors == "3" ]] || [[ $lid_closed == "true" ]]; then

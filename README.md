@@ -19,7 +19,7 @@ $ paru -S bspwm sxhkd rofi dunst feh polybar xidlehook thunar kitty polkit-gnome
 * hyprland:
 
 ```
-$ paru -S hyprland wofi waybar dunst wlogout polkit-gnome ttf-jetbrains-mono-nerd thunar kitty swww swaync swaylock-effects networkmanager neovim gamemode cliphist btop
+$ paru -S hyprland wofi waybar dunst wlogout polkit-gnome ttf-jetbrains-mono-nerd thunar kitty swww swaync swaylock-effects networkmanager neovim gamemode cliphist btop hyprshot
 ```
 
 Some generic packages:
