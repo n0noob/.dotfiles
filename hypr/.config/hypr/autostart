@@ -14,12 +14,11 @@ wallpapers=~/.wallpapers
 $scripts/launch_waybar &
 
 # wallpaper
-# $scripts/wall $(find $wallpapers/ -type f | shuf -n 1) &
 swww query || swww init
 
 # clipboard
 wl-paste --watch cliphist store &
 
 # Applets
-nm-applet --indicator &
+nm-applet &
 blueman-applet &

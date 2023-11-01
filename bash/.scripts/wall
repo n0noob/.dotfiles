@@ -5,5 +5,6 @@ echo "Changing wallpaper to $1"
 swww img "$1" \
     --transition-fps 60 \
     --transition-type grow \
+    --transition-step 80 \
     --transition-pos 0.925,0.977 \
     --transition-duration 2

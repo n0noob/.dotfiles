@@ -10,13 +10,17 @@ super + Return
 super + w
 	firefox
 
+# file browser
+super + n
+	thunar
+
 # program launcher
 super + {@space,d}
 	~/.config/rofi/launchers/type-2/launcher.sh
 
 # make sxhkd reload its configuration files:
-# super + Escape
-# 	pkill -USR1 -x sxhkd
+super + Escape
+ 	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
 
 #
 # bspwm hotkeys
@@ -28,7 +32,7 @@ super + alt + {q,r}
 
 # close and kill
 super + ctrl + q
-	bspc node -{c,k}
+	bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m
@@ -85,8 +89,8 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+super + shift + {1-9,0}
+	bspc node -d '^{1-9,10}' --follow
 
 #
 # preselect
@@ -138,7 +142,7 @@ super + l
 
 # Custom
 super + ctrl + p 
-	feh $(find ~/.Pictures -type f \( -iname "*.jpg" -or -iname "*.jpeg" -or -iname "*.png" \) | grep -v "__MACOSX" | shuf -n1) -F -d 
+	pkill -x feh; feh $(find ~/.Pictures -type f \( -iname "*.jpg" -or -iname "*.jpeg" -or -iname "*.png" \) | grep -v "__MACOSX" | shuf -n1) -F -d 
 
 super + ctrl + v 
 	mpv --no-audio --fullscreen --start=5% "$(find ~/.Videos -type f \( -iname "*.m4v" -or -iname "*.mp4" \)| shuf -n1)"
