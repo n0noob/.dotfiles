@@ -27,6 +27,8 @@ WORKSPACE_COUNT=10
 num_monitors="$(xrandr --query | grep ' connected' | wc -l)"
 
 if [[ $num_monitors = "1" ]]; then 
+    xrandr --output HDMI-A-0 --off
+    xrandr --output DP-1-0 --off
     echo "Only internal monitor connected"
     if [[ $win_manager == "bspwm" ]]; then 
         bspc monitor -d "${WORKSPACES[*]}"
