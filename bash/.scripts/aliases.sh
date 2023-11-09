@@ -2,6 +2,7 @@
 alias ls="exa --color=always --group-directories-first"
 #alias ll='ls -lv --ignore=..'   # show long listing of all except ".."
 alias ll="exa -l --color=always --group-directories-first"
+alias tree="exa --tree"
 alias vim='nvim'
 
 # mpv

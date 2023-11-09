@@ -1,0 +1,9 @@
+.rustup/*
+.cargo/
+.m2/
+.cache/
+.java/
+.android/
+.atom/
+.cache/
+.npm/

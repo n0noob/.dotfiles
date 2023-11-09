@@ -1,3 +1,2 @@
 feh -B black \
     --scale-down
-    --auto-zoom

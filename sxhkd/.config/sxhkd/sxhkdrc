@@ -1,4 +1,4 @@
-#
+
 # wm independent hotkeys
 #
 
@@ -89,8 +89,10 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + shift + {1-9,0}
-	bspc node -d '^{1-9,10}' --follow
+# super + shift + {1-9,0}
+# 	bspc node -d '^{1-9,10}' --follow
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
 # preselect
@@ -138,11 +140,11 @@ super + Print
 
 # lock screen
 super + l
-	~/.scripts/x-blur-lock.sh
+	~/.scripts/x-blur-lock.sh &
 
 # Custom
-super + ctrl + p 
-	pkill -x feh; feh $(find ~/.Pictures -type f \( -iname "*.jpg" -or -iname "*.jpeg" -or -iname "*.png" \) | grep -v "__MACOSX" | shuf -n1) -F -d 
+super + ctrl + p
+	pkill -x feh; feh $(find ~/.int-cert/images -type f \( -iname "*.jpg" -or -iname "*.jpeg" -or -iname "*.png" \) | shuf -n1) -F -d 
 
 super + ctrl + v 
-	mpv --no-audio --fullscreen --start=5% "$(find ~/.Videos -type f \( -iname "*.m4v" -or -iname "*.mp4" \)| shuf -n1)"
+	mpv --no-audio --fullscreen --start=5% "$(find ~/.int-cert/videos -type f \( -iname "*.m4v" -or -iname "*.mp4" \)| shuf -n1)"
