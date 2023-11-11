@@ -25,7 +25,7 @@ pgrep -x dunst > /dev/null || dunst --config ~/.config/dunst/dunstrc &
 pgrep -x picom > /dev/null || picom -b &
 
 # bar
-~/.config/polybar/launch.sh
+~/.config/polybar/launch-topbar-bspwm.sh &
 
 # auto lock screen
 /usr/bin/xidlehook \

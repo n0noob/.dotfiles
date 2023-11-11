@@ -147,4 +147,4 @@ super + ctrl + p
 	pkill -x feh; feh $(find ~/.int-cert/images -type f \( -iname "*.jpg" -or -iname "*.jpeg" -or -iname "*.png" \) | shuf -n1) -F -d 
 
 super + ctrl + v 
-	mpv --no-audio --fullscreen --start=5% "$(find ~/.int-cert/videos -type f \( -iname "*.m4v" -or -iname "*.mp4" \)| shuf -n1)"
+	pkill -x mpv; mpv --aid=no --fs --start=5% "$(find ~/.int-cert/videos -type f \( -iname "*.m4v" -or -iname "*.mp4" \)| shuf -n1)"
