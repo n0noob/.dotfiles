@@ -103,7 +103,7 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-bindkey "^R" history-incremental-search-backward
+# bindkey "^R" history-incremental-search-backward
 source ~/.scripts/constants.sh
 source ~/.scripts/aliases.sh
 
