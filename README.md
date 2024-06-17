@@ -5,7 +5,7 @@ Requires [gnu/stow](https://www.gnu.org/software/stow/) for dotfiles management.
 
 Essentials:
 ```
-# pacman -S paru stow 
+# pacman -S paru stow
 ```
 
 In addition, following dependencies are required:
@@ -24,8 +24,16 @@ $ paru -S hyprland wofi waybar dunst wlogout polkit-gnome ttf-jetbrains-mono-ner
 
 Some generic packages:
 ```
-# paru -S mpv yt-dlp refind nwg-look-bin meld git code hyprshot fd fzf
+# paru -S zsh mpv exa refind nwg-look-bin meld git code hyprshot fd fzf
 ```
+# Manual installations and configurations
+
+* Install [oh-my-zsh](https://ohmyz.sh/)
+* Change default shell to `zsh`:
+```
+chsh -s $(which zsh)
+```
+* Change default theme using `nwg-look` utility in hyprland
 
 ## Home location
 dotfiles home location:
