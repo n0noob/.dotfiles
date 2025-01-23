@@ -6,6 +6,11 @@ if [[ ! `pidof polkit-gnome-authentication-agent-1` ]]; then
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 fi
 
+if [[ ! `pidof hypridle` ]]; then
+    hypridle >> /var/log/hypridle.log &
+fi
+
+
 # variables
 scripts=~/.scripts
 wallpapers=~/.wallpapers
