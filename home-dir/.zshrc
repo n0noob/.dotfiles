@@ -109,3 +109,10 @@ source ~/.scripts/aliases.sh
 
 # Created by `pipx` on 2023-11-07 18:07:58
 export PATH="$PATH:/home/anoop/.local/bin"
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2025-03-15 11:29:38
+export PATH="$PATH:/home/aneem/.local/bin"
