@@ -1,0 +1,5 @@
+apps:
+  dotmgr:
+    dirs:
+    - .config/dotmgr
+dotfiles_dir: /home/aneem/.dotfiles

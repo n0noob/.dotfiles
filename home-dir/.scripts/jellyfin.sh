@@ -14,14 +14,6 @@ MOUNT_ROOT_PATH="/media/"
 
 # jellyfin-start function
 jellyfin-start() {
-    echo "Starting Jellyfin service..."
-    # Start the jellyfin service
-    sudo systemctl start jellyfin
-
-    # Allow TCP traffic to port 8096 for the current session
-    echo "Configuring firewall to allow TCP traffic on port 8096..."
-    sudo firewall-cmd --add-port=8096/tcp
-
     # Mount directories based on the map
     for SOURCE in "${!MOUNT_MAP[@]}"; do
         DESTINATION="${MOUNT_ROOT_PATH}${MOUNT_MAP[$SOURCE]}"
@@ -32,6 +24,14 @@ jellyfin-start() {
             echo "Skipping $SOURCE -> $DESTINATION. Ensure both directories exist."
         fi
     done
+
+    echo "Starting Jellyfin service..."
+    # Start the jellyfin service
+    sudo systemctl start jellyfin
+
+    # Allow TCP traffic to port 8096 for the current session
+    echo "Configuring firewall to allow TCP traffic on port 8096..."
+    sudo firewall-cmd --add-port=8096/tcp
 }
 
 # jellyfin-stop function
