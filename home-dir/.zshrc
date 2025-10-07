@@ -64,7 +64,7 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy/mm/dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -87,8 +87,15 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_IN.UTF-8
+export LC_ALL=en_IN.UTF-8
+export LC_CTYPE=en_IN.UTF-8
 
 # Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='nvim'
+# fi
 export EDITOR='nvim'
 
 # Compilation flags
@@ -113,6 +120,3 @@ export PATH="$PATH:/home/anoop/.local/bin"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Created by `pipx` on 2025-03-15 11:29:38
-export PATH="$PATH:/home/aneem/.local/bin"
